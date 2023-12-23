@@ -3,40 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Seminario</title>
+    <title>Incripciones Seminarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container mt-3">
-        <h1>Seminario</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Telefono</th>
-                    <th>Institucion</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>Estado</th>
-                    <th>Observacion</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for seminario in seminarios %}
-                    <tr>
-                        <td>{{ seminario.nombre }}</td>
-                        <td>{{ seminario.telefono }}</td>
-                        <td>{{ seminario.institucion.nombre }}</td>
-                        <td>{{ seminario.fecha_in }}</td>
-                        <td>{{ seminario.hora_in }}</td>
-                        <td>{{ seminario.estado }}</td>
-                        <td>{{ seminario.observacion }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <a href="agregar/" class="btn btn-secondary">Agregar Nuevo</a>
-        <a href="instituciones/" class="btn btn-warning">instituciones</a>
+    <div class="container">
+        <div class="alert alert-info display-1 mt-3 text-center">
+            Seminarios
+        </div>
+        <div class="d-flex justify-content-center flex-row">
+            <a href="agregar" class="btn btn-warning m-3">inscribirse a Seminario</a>
+            <a href="instituciones" class="btn btn-warning m-3">Agregar Institucion</a>
+            <a href="listado" class="btn btn-warning m-3">Listar Inscripciones</a>
+            <a href="usuario" class="btn btn-warning m-3">Usuario</a>
+        </div>
+        <div class="d-flex justify-content-center flex-row">
+            <a href="seminarioclass" class="btn btn-warning m-3">Seminario Class</a>
+            <a href="institucionclass" class="btn btn-warning m-3">Institucion Class</a>
+            <a href="buscar/" class="btn btn-warning m-3">Buscar por ID</a>
+        </div>
     </div>
 </body>
-</html>
+</html> 

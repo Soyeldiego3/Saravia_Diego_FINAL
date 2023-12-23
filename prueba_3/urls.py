@@ -16,11 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from prueba_3_app.views import RenderSeminario, instituciones, Agregar
+from prueba_3_app.views import RenderSeminario, instituciones, Agregar, RenderIndex, Usuario, ListadoSeminario, ListadoInstituciones, buscar_id, DetalleView
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
-    path('', RenderSeminario, name='RenderSeminario'),
+    path('', RenderIndex),
+    path('listado/', RenderSeminario, name='RenderSeminario'),
     path('agregar/', Agregar, name='Agregar'),
     path('instituciones/', instituciones, name='instituciones'),
+    path('usuario', Usuario),
+    path('buscar/', buscar_id, name='buscar_id'),
+    path('detalle/<int:pk>/', DetalleView.as_view(), name='detalle_api'),
+
+    path('seminarioclass', ListadoSeminario.as_view()),
+    path('institucionclass', ListadoInstituciones.as_view()),
+    
 ]

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container mt-3">
-        <h1 class="mb-4">Agregar Institución</h1>
+        <h1 class="mb-4 alert alert-info display-1 text-center">Agregar Institución</h1>
         <form method="post" action="/instituciones/" class="mb-4">
             {% csrf_token %}
             <div class="mb-3">
@@ -18,7 +18,7 @@
             <button type="submit" class="btn btn-primary">Guardar Institución</button>
         </form>
         <a href="/" class="btn btn-success">Inicio</a>
-        <a href="/agregar" class="btn btn-secondary">Agregar Nuevo</a>
+        <a href="/agregar" class="btn btn-secondary">Inscribir Nuevo</a>
         <hr>
         <h2>Listado de Instituciones</h2>
         <ul class="list-group">

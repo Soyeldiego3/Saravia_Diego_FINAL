@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container mt-3">
-        <h1 class="mb-4">Inscripciones Seminario</h1>
+        <h1 class="mb-4 alert alert-info display-1 text-center">Inscripciones Seminario</h1>
         <form method="post" action="{% url 'Agregar' %}" class="mb-4">
             {% csrf_token %}
 
@@ -60,6 +60,7 @@
         </form>
         <a href="/" class="btn btn-success">Inicio</a>
         <a href="/instituciones" class="btn btn-warning">instituciones</a>
+        <a href="/listado" class="btn btn-warning">Listar Inscripciones</a>
     </div>
 </body>
 </html>
